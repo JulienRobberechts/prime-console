@@ -36,11 +36,11 @@ npm start
 prime-console >
 ```
 
-3. Enter a number N. The multiplication table primes numbers up to N will appear. The result will appear in user format (not javascript object):
+3. Enter a number N. The multiplication table prime numbers up to N will appear. The result will appear in user format (not javascript object):
 
 ```cmd
 prime-console > 10
-multiplication table primes numbers up to 10:
+multiplication table prime numbers up to 10:
 | x| 2| 3| 5| 7|
 | 2| 4| 6| 10| 14|
 | 3| 6| 9| 15| 21|
@@ -67,7 +67,7 @@ The result will appear in javascript object format:
 
 ```cmd
 prime-console-DEV > primes(20)
-primes numbers up to 20:
+prime numbers up to 20:
 [ 2, 3, 5, 7, 11, 13, 17, 19 ]
 ```
 
@@ -82,7 +82,7 @@ multiplication table for [3,4,5]:
 
 ```cmd
 prime-console-DEV > mptable(7)
-multiplication table primes numbers up to 7:
+multiplication table prime numbers up to 7:
 [ [ 'x', 2, 3, 5, 7 ],
   [ 2, 4, 6, 10, 14 ],
   [ 3, 6, 9, 15, 21 ],
@@ -93,7 +93,7 @@ multiplication table primes numbers up to 7:
 4. Javascript commands and combination of commands are possible like in a standard Node REPL.
 ```cmd
 prime-console-DEV > mtable(primes(4*4))
-primes numbers up to 16:
+prime numbers up to 16:
 multiplication table for [2,3,5,7,11,13]:
 [ [ 'x', 2, 3, 5, 7, 11, 13 ],
   [ 2, 4, 6, 10, 14, 22, 26 ],

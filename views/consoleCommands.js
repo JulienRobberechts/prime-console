@@ -29,7 +29,7 @@ const checkArray = (paramName, arg) => {
 }
 
 const primesCmd = (limit) => tryCmd(
-  `primes numbers up to ${limit}:`,
+  `primes number up to ${limit}:`,
   () => primes.findPrimes(checkInt('limit',limit))
 );
 
@@ -39,7 +39,7 @@ const mtableCmd = (array) => tryCmd(
 );
 
 const mptableCmd = (limit) => tryCmd(
-  `multiplication table primes numbers up to ${limit}:`,
+  `multiplication table prime numbers up to ${limit}:`,
   () => mPrimesTable.getMPrimesTable(checkInt('limit', limit))
 );
 

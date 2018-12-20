@@ -1,7 +1,7 @@
 {
   "name": "prime-console",
   "version": "1.0.0",
-  "description": "Node.js console application - display a multiplication table of n first primes numbers ",
+  "description": "Node.js console application - display a multiplication table of n first prime numbers ",
   "main": "main.js",
   "scripts": {
     "start": "node main",
