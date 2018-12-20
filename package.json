@@ -1,0 +1,23 @@
+{
+  "name": "prime-console",
+  "version": "1.0.0",
+  "description": "Node.js console application - display a multiplication table of n first primes numbers ",
+  "main": "main.js",
+  "scripts": {
+    "test": "mocha ./**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OmicronDev/prime-console.git"
+  },
+  "author": "Julien Robberechts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OmicronDev/prime-console/issues"
+  },
+  "homepage": "https://github.com/OmicronDev/prime-console#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
