@@ -1,8 +1,9 @@
 const primes = require('../lib/primes');
 const multiplicationTable = require('../lib/multiplicationTable');
 
-const tryCmd = (cmd) => {
+const tryCmd = (header, cmd) => {
   try {
+    console.log(header);
     return cmd();
   } catch (error) {
     return error.toString();
@@ -26,9 +27,15 @@ const checkArray = (paramName, arg) => {
   return value;
 }
 
-const primesCmd = (limit) => tryCmd(() => primes.findPrimes(checkInt('limit',limit)));
+const primesCmd = (limit) => tryCmd(
+  `primes numbers up to ${limit}:`,
+  () => primes.findPrimes(checkInt('limit',limit))
+);
 
-const mtableCmd = (array) => tryCmd(() => multiplicationTable.generateTable(checkArray('array', array)));
+const mtableCmd = (array) => tryCmd(
+  `multiplication table for ${JSON.stringify(array)}:`,
+  () => multiplicationTable.generateTable(checkArray('array', array))
+);
 
 module.exports = {
   primesCmd,
