@@ -4,6 +4,7 @@
   "description": "Node.js console application - display a multiplication table of n first primes numbers ",
   "main": "main.js",
   "scripts": {
+    "start": "node main",
     "test": "mocha ./**/*.test.js"
   },
   "repository": {
