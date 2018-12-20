@@ -1,5 +1,6 @@
 const repl = require('repl');
-const primes = require('../lib/primes');
+const cmd = require('./consoleCommands.js');
+const { primesCmd } = cmd;
 
 exports.launch = () => {
   const replServer = repl.start({
@@ -11,24 +12,6 @@ exports.launch = () => {
   Object.defineProperty(replServer.context, 'primes', {
     configurable: false,
     enumerable: true,
-    value: (limit) => tryCmd(() => primes.findPrimes(checkInt(limit))),
+    value: primesCmd,
   });
-
-}
-
-const tryCmd = (cmd) => {
-  try {
-    return cmd();
-  } catch (error) {
-    return "invalid command - " + error;
-  }
-}
-
-const checkInt = (stringArg) => {
-  const value = eval(stringArg);
-  var integer = parseInt(value, 10);
-  if (isNaN(integer)) {
-    throw `'${JSON.stringify(value)}' is not a valid integer parameter.`;
-  }
-  return integer;
 }
