@@ -1,5 +1,6 @@
 const primes = require('../lib/primes');
 const multiplicationTable = require('../lib/multiplicationTable');
+const mPrimesTable = require('../lib/mPrimesTable');
 
 const tryCmd = (header, cmd) => {
   try {
@@ -37,7 +38,13 @@ const mtableCmd = (array) => tryCmd(
   () => multiplicationTable.generateTable(checkArray('array', array))
 );
 
+const mptableCmd = (limit) => tryCmd(
+  `multiplication table primes numbers up to ${limit}:`,
+  () => mPrimesTable.getMPrimesTable(checkInt('limit', limit))
+);
+
 module.exports = {
   primesCmd,
   mtableCmd,
+  mptableCmd,
 };

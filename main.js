@@ -1,2 +1,9 @@
+const replDev = require('./views/consoleReplDev');
 const repl = require('./views/consoleRepl');
-repl.launch();
+
+if (process.argv.includes('dev')){
+  replDev.launch();
+}
+else {
+  repl.launch();
+}
