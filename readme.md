@@ -1,11 +1,18 @@
-# prime-console
+# Prime-console
 
-This demo project is a simple nodeJS console app. The goal is to takes numeric input (N) from a user and outputs a multiplication table of (N)
-prime numbers.
+NodeJS exercise.
 
-# How to run the project
+This demo project is a simple NodeJS console app.
 
-## Get the app
+**Requirement**:
+
+The goal is to take numeric input (N) from a user and outputs a multiplication table of prime numbers up to N.
+
+![prime-numbers-table](./resources/prime-numbers-table.jpg)
+
+## How to run the project
+
+### Get the app
 
 ```cmd
 // 1. Install npm packages
@@ -15,7 +22,7 @@ npm i
 npm test
 ```
 
-## Use the app
+### Use the app
 
 There is 2 different console interfaces: one for user and one for developers.
 
@@ -109,9 +116,9 @@ multiplication table prime numbers up to 10:
      [ 4, 4, 8, 12, 16 ] ]
    ```
 
-# Code review
+## Code review
 
-## The good
+### The good
 
 - the 4 modules: primes, multiplicationTable, mPrimesTable and tableView are totally segregate.
 
@@ -126,14 +133,14 @@ multiplication table prime numbers up to 10:
 
 - the dev REPL is useful in larger project for investigations even by business analysts. It could help for the transparency of the software. (with a BDD approach)
 
-## The bad
+### The bad
 
 - I made the choice to mix the test code files and the production code files next to each other.
   It helps to identify quickly the test file associated with the production file but in a larger app a tests folder could also be a good solution for cross-cutting unit tests and integration tests.
 - the view directory include some console commands adapters. This could be improved.
 - the algorithm used to calculate the prime numbers is very greedy in memory.
 
-## The ugly
+### The ugly
 
 - Node.Js is not the good runtime to compute this type of intensive calculation.
   A better environment would be a multi-threaded applications (C#, java...). Nodejs is better for quick and short asynchronous actions as I/O (the opposite of this project!).
@@ -142,7 +149,7 @@ multiplication table prime numbers up to 10:
   And if this amount of memory is too large (>100 million items on my machine)
   the node heap will run out of memory. I don't know (yet) an elegant way to prevent of catch this error property.
 
-## To do next
+### To do next
 
 - It could be possible to treat the prime generation as a stream and transform it on the fly to the console. The algorithm would generate items one by one with a JavaScript generator function. It could have been useful especially with a slower algorithm or treatment.
 
@@ -150,4 +157,4 @@ multiplication table prime numbers up to 10:
 
 - It could be nice to expose this library as an API and consume it on a React page.
 
-Thank you for taking the time to read this doc.
+_Thank you for taking the time to read this readme :smile:._
