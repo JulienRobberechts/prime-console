@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OmicronDev/prime-console.git"
+    "url": "git+https://github.com/JulienRobberechts/prime-console"
   },
   "author": "Julien Robberechts",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/OmicronDev/prime-console/issues"
+    "url": "https://github.com/JulienRobberechts/prime-console/issues"
   },
-  "homepage": "https://github.com/OmicronDev/prime-console#readme",
+  "homepage": "https://github.com/JulienRobberechts/prime-console",
   "dependencies": {
     "chai": "^4.2.0",
     "mocha": "^5.2.0"
