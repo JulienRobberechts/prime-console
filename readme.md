@@ -1,3 +1,5 @@
+[![Node.js CI](https://github.com/JulienRobberechts/prime-console/actions/workflows/nodejs.yml/badge.svg)](https://github.com/JulienRobberechts/prime-console/actions/workflows/nodejs.yml)
+
 # Prime-console
 
 NodeJS exercise.
